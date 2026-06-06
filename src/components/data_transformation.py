@@ -11,7 +11,7 @@ from sklearn.compose import ColumnTransformer
 
 from src.exception import CustomException
 from src.loggers import logging
-from src.utils import save_object
+from src.utils import save_object,evaluate_models
 
 @dataclass
 class DataTransformationConfig:
@@ -107,7 +107,7 @@ class DataTransformation:
             return(
                 train_arr,
                 test_arr,
-                self.data_transformation_config.preprocessor_obj_file_path
+                #self.data_transformation_config.preprocessor_obj_file_path
             )
 
         except Exception as e:
